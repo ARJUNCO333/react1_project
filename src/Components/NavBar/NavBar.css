@@ -9,6 +9,12 @@
 .brand {
   margin-right: 50px;
 }
+.nav-logo{
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  background-color: #3e8bf5;
+}
 
 .blue-background {
   background-color: #3e8bf5;
@@ -20,56 +26,7 @@
   margin-left: 50px;
 }
 
-.name-search,
-.mrn-search {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
 
-.name-search div,
-.mrn-search div {
-  margin-right: 20px;
-}
 
-.name-search input,
-.mrn-search input {
-  padding: 10px;
-  border: 1px solid rgb(85, 120, 185);
-  border-radius: 20px;
-  border-color: black;
-  width: 100px;
-  outline: none;
-  padding-left: 35px;
-}
 
-.name-search .search-icon,
-.mrn-search .search-icon {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: rgb(85, 120, 185);
-  border-color: black;
-}
 
-.user {
-  display: flex;
-  align-items: center;
-  margin-left: 100px;
-}
-
-.user-icon {
-  margin-right: 20px;
-  margin-left: 30px;
-}
-
-.user-text {
-  margin-left: 20px;
-}
-
-.notification-icon {
-  margin-left: 30px;
-  font-size: 25px;
-  cursor: pointer;
-}
