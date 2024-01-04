@@ -43,8 +43,8 @@ const rows = [
 
 const Demo = () => {
   return (
-    <Box  >
-      <TableContainer component={Paper} sx={{ marginTop: "30px" }}>
+    <Box   >
+      <TableContainer component={Paper} sx={{ marginTop: "90px" }}>
         <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
           <TableHead>
             <TableRow>
