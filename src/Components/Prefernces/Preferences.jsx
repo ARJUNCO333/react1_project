@@ -8,8 +8,14 @@ import {
 } from "@mui/material";
 import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
 import React from "react";
+import { useState } from "react";
 
 const Preferences = () => {
+  
+    const [insurance, setInsurance] = useState(0);
+    const [language, setLanguage] = useState(0);
+    const [orientation, setOrientation] = useState(0);
+    const [specialNeeds, setSpecialNeeds] = useState(0);
   return (
     <Box
       sx={{
@@ -44,8 +50,14 @@ const Preferences = () => {
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             label="insurance"
+            value={insurance}
+            onChange={(event) => setInsurance(event.target.value)}
           >
-            <MenuItem value={0}>Medicare1</MenuItem>
+            <MenuItem value={0}>
+            <em>None</em>
+          </MenuItem>
+            
+            <MenuItem value={10}>None</MenuItem>
             <MenuItem value={20}>Medicare2</MenuItem>
             <MenuItem value={30}>Medicare3</MenuItem>
           </Select>
@@ -66,9 +78,14 @@ const Preferences = () => {
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
-            label="insurance"
+            label="language"
+            value={language}
+            onChange={(event) => setLanguage(event.target.value)}
           >
-            <MenuItem value={0}>Medicare1</MenuItem>
+            <MenuItem value={0}>
+            <em>None</em>
+          </MenuItem>
+            <MenuItem value={10}>None</MenuItem>
             <MenuItem value={20}>Medicare2</MenuItem>
             <MenuItem value={30}>Medicare3</MenuItem>
           </Select>
@@ -84,10 +101,16 @@ const Preferences = () => {
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             
-            label="insurance"
+            label="orientation"
+            value={orientation}
+            onChange={(event) => setOrientation(event.target.value)}
             
           >
-            <MenuItem value={0}>Medicare1</MenuItem>
+            <MenuItem value={0}>
+            <em>None</em>
+          </MenuItem>
+            
+            <MenuItem value={10}>None</MenuItem>
             <MenuItem value={20}>Medicare2</MenuItem>
             <MenuItem value={30}>Medicare3</MenuItem>
           </Select>
@@ -104,10 +127,15 @@ const Preferences = () => {
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             
-            label="insurance"
+            label="specialneeds"
+            value={specialNeeds}
+            onChange={(event) => setSpecialNeeds(event.target.value)}
             
           >
-            <MenuItem value={0}>Medicare1</MenuItem>
+            <MenuItem value={0}>
+            <em>None</em>
+          </MenuItem>
+            <MenuItem value={10}>Medicare1</MenuItem>
             <MenuItem value={20}>Medicare2</MenuItem>
             <MenuItem value={30}>Medicare3</MenuItem>
           </Select>

@@ -24,7 +24,8 @@ const PersonalInfo = () => {
       <Box sx={{ display: "flex", paddingLeft: "40px" ,paddingTop:""}}>
         <Box sx={{ width: "200px" }}>
           <TextField
-            id="outlined-size-small"
+            id="last-name"
+            name="lastname"
             placeholder="Last Name"
             size="small"
             sx={{ backgroundColor: "white", margin: "15px" }}
@@ -32,7 +33,8 @@ const PersonalInfo = () => {
         </Box>
         <Box sx={{ width: "200px" }}>
           <TextField
-            id="outlined-size-small"
+            id="first-name"
+            name="firstname"
             placeholder="First Name"
             size="small"
             sx={{ backgroundColor: "white", margin: "15px" }}
@@ -42,7 +44,8 @@ const PersonalInfo = () => {
       <Box sx={{ display: "flex",paddingLeft: "40px" }}>
         <Box sx={{ width: "200px" }}>
           <TextField
-            id="outlined-size-small"
+            id="age"
+            name="age"
             placeholder="Age"
             size="small"
             sx={{ backgroundColor: "white", margin: "15px" }}
@@ -50,7 +53,8 @@ const PersonalInfo = () => {
         </Box>
         <Box sx={{ width: "200px" }}>
           <TextField
-            id="outlined-size-small"
+            id="gender"
+            name="gender"
             placeholder="Gender"
             size="small"
             sx={{ backgroundColor: "white", margin: "15px" }}
@@ -60,7 +64,8 @@ const PersonalInfo = () => {
       <Box sx={{ display: "flex",paddingLeft: "40px" }}>
         <Box sx={{ width: "200px" }}>
           <TextField
-            id="outlined-size-small"
+            id="name"
+            name="name"
             placeholder=" Name"
             size="small"
             sx={{ backgroundColor: "white", margin: "15px" }}
@@ -70,7 +75,8 @@ const PersonalInfo = () => {
       <Box sx={{ display: "flex",paddingLeft: "40px" }}>
         <Box sx={{ width: "200px" }}>
           <TextField
-            id="outlined-size-small"
+            id="street-name"
+            name="streetname"
             placeholder="Street Name"
             size="small"
             sx={{ backgroundColor: "white", margin: "15px" }}
@@ -78,8 +84,8 @@ const PersonalInfo = () => {
         </Box>
         <Box sx={{ width: "200px" }}>
           <TextField
-            id="outlined-size-small"
-            
+            id="town"
+            name="town"
             placeholder="Town"
             size="small"
             sx={{ backgroundColor: "white", margin: "15px" }}
