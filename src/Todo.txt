@@ -1,0 +1,18 @@
+1.MUI: You have provided an out-of-range value `undefined` for the select component.
+        Consider providing a value that matches one of the available options or ''.
+        The available values are `0`, `20`, `30`.
+
+2.A form field element has neither an id nor a name attribute. 
+  This might prevent the browser from correctly autofilling the form.
+  To fix this issue, add a unique id or name attribute to a form field. 
+  This is not strictly needed, but still recommended even if you have an autocomplete attribute on the same element.
+
+
+3.No label associated with a form field
+  A <label> isn't associated with a form field.
+  To fix this issue, nest the <input> in the <label> or provide a for attribute on the <label> that matches a form field id.
+
+4.Duplicate form field id in the same form
+  Multiple form field elements in the same form have the same id attribute value. 
+  This might prevent the browser from correctly autofilling the form.
+  To fix this issue, use unique id attribute values for each form field.

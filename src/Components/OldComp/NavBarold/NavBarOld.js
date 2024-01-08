@@ -6,12 +6,12 @@ import LoginOld from "../LoginOld/LoginOld";
 import NotificationOld from "../NotificationOld/NotificationOld";
 
 const NavBarOld = () => {
-    console.log("old")
+    
   return (
     <div className="navbar">
       
         <div className="nav-logo" style={{backgroundColor:"#3e8bf5", padding:"22px" }}>
-          <img  alt="logo" style={{ width: "50px", height: "50px",}} />
+        
           <h1>REFAPEDIA   </h1>
         </div>
         

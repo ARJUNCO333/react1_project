@@ -36,7 +36,7 @@ const Search = styled("div")(({ theme }) => ({
 }));
 
 function NavBar() {
-  console.log("new")
+
   return (
     <AppBar>
       <StyledToolBar>
