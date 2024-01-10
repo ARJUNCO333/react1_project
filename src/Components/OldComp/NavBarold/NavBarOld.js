@@ -4,6 +4,7 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import SearchBarOld from "../SearchBarOld/SearchBarOld";
 import LoginOld from "../LoginOld/LoginOld";
 import NotificationOld from "../NotificationOld/NotificationOld";
+import { Link } from "react-router-dom";
 
 const NavBarOld = () => {
     
@@ -19,7 +20,23 @@ const NavBarOld = () => {
       <div className="patient-search">
         <h1>Patient Search</h1>
       </div>
+     
       <SearchBarOld />
+      <div>
+          <ul>
+            <Link
+              to="/"
+              style={{
+                textDecoration: "none",
+                color: "black",
+                fontSize: "20px",
+                paddingLeft:"15px"
+              }}
+            >
+              NEW
+            </Link>
+          </ul>
+        </div>
       <LoginOld />
       <NotificationOld />
     </div>

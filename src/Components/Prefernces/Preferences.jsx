@@ -8,14 +8,10 @@ import {
 } from "@mui/material";
 import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
 import React from "react";
-import { useState } from "react";
+
 
 const Preferences = () => {
-  
-    const [insurance, setInsurance] = useState(0);
-    const [language, setLanguage] = useState(0);
-    const [orientation, setOrientation] = useState(0);
-    const [specialNeeds, setSpecialNeeds] = useState(0);
+  const defaultValue = 0;
   return (
     <Box
       sx={{
@@ -43,21 +39,20 @@ const Preferences = () => {
         </Typography>
         <FormControl
           size="small"
-          sx={{ width: "300px", backgroundColor: "white",marginLeft:"28px" }}
+          sx={{ width: "300px", backgroundColor: "white", marginLeft: "28px" }}
         >
           <InputLabel id="demo-simple-select-label"></InputLabel>
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             label="insurance"
-            value={insurance}
-            onChange={(event) => setInsurance(event.target.value)}
+            defaultValue={defaultValue}
           >
             <MenuItem value={0}>
-            <em>None</em>
-          </MenuItem>
-            
-            <MenuItem value={10}>None</MenuItem>
+              <em>None</em>
+            </MenuItem>
+
+            <MenuItem value={10}>Medicare1</MenuItem>
             <MenuItem value={20}>Medicare2</MenuItem>
             <MenuItem value={30}>Medicare3</MenuItem>
           </Select>
@@ -72,75 +67,78 @@ const Preferences = () => {
         </Typography>
         <FormControl
           size="small"
-          sx={{ width: "300px", backgroundColor: "white",marginLeft:"26px" }}
+          sx={{ width: "300px", backgroundColor: "white", marginLeft: "26px" }}
         >
           <InputLabel id="demo-simple-select-label"></InputLabel>
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             label="language"
-            value={language}
-            onChange={(event) => setLanguage(event.target.value)}
+            defaultValue={defaultValue}
           >
             <MenuItem value={0}>
-            <em>None</em>
-          </MenuItem>
-            <MenuItem value={10}>None</MenuItem>
-            <MenuItem value={20}>Medicare2</MenuItem>
-            <MenuItem value={30}>Medicare3</MenuItem>
-          </Select>
-        </FormControl>
-      </Box>
-      <Box sx={{ display: "flex", alignItems: "center" ,paddingTop:"15px"}}>
-        <Typography variant="p"  sx={{ margin: "3px", marginLeft: "15px" ,fontWeight:"bold"}}>
-          Orientation :
-        </Typography>
-        <FormControl size="small"  sx={{width:"300px",backgroundColor:"white",marginLeft:"15px"}}>
-          <InputLabel id="demo-simple-select-label"></InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            
-            label="orientation"
-            value={orientation}
-            onChange={(event) => setOrientation(event.target.value)}
-            
-          >
-            <MenuItem value={0}>
-            <em>None</em>
-          </MenuItem>
-            
-            <MenuItem value={10}>None</MenuItem>
-            <MenuItem value={20}>Medicare2</MenuItem>
-            <MenuItem value={30}>Medicare3</MenuItem>
-          </Select>
-        </FormControl>
-        
-      </Box>
-      <Box sx={{ display: "flex", alignItems: "center" ,paddingTop:"15px"}}>
-        <Typography variant="p"  sx={{ margin: "3px", marginLeft: "15px" ,fontWeight:"bold"}}>
-          Special Needs :
-        </Typography>
-        <FormControl size="small"  sx={{width:"300px",backgroundColor:"white",marginLeft:"0px"}}>
-          <InputLabel id="demo-simple-select-label"></InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            
-            label="specialneeds"
-            value={specialNeeds}
-            onChange={(event) => setSpecialNeeds(event.target.value)}
-            
-          >
-            <MenuItem value={0}>
-            <em>None</em>
-          </MenuItem>
+              <em>None</em>
+            </MenuItem>
             <MenuItem value={10}>Medicare1</MenuItem>
             <MenuItem value={20}>Medicare2</MenuItem>
             <MenuItem value={30}>Medicare3</MenuItem>
           </Select>
         </FormControl>
-        
+      </Box>
+      <Box sx={{ display: "flex", alignItems: "center", paddingTop: "15px" }}>
+        <Typography
+          variant="p"
+          sx={{ margin: "3px", marginLeft: "15px", fontWeight: "bold" }}
+        >
+          Orientation :
+        </Typography>
+        <FormControl
+          size="small"
+          sx={{ width: "300px", backgroundColor: "white", marginLeft: "15px" }}
+        >
+          <InputLabel id="demo-simple-select-label"></InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            label="orientation"
+            defaultValue={defaultValue}
+          >
+            <MenuItem value={0}>
+              <em>None</em>
+            </MenuItem>
+
+            <MenuItem value={10}>Medicare1</MenuItem>
+            <MenuItem value={20}>Medicare2</MenuItem>
+            <MenuItem value={30}>Medicare3</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
+      <Box sx={{ display: "flex", alignItems: "center", paddingTop: "15px" }}>
+        <Typography
+          variant="p"
+          sx={{ margin: "3px", marginLeft: "15px", fontWeight: "bold" }}
+        >
+          Special Needs :
+        </Typography>
+        <FormControl
+          size="small"
+          sx={{ width: "300px", backgroundColor: "white", marginLeft: "0px" }}
+        >
+          <InputLabel id="demo-simple-select-label"></InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            label="specialneeds"
+            defaultValue={defaultValue}
+          >
+            <MenuItem value={0}>
+              <em>None</em>
+            </MenuItem>
+            <MenuItem value={10}>Medicare1</MenuItem>
+            <MenuItem value={20}>Medicare2</MenuItem>
+            <MenuItem value={30}>Medicare3</MenuItem>
+          </Select>
+        </FormControl>
       </Box>
     </Box>
   );

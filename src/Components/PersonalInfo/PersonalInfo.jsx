@@ -2,7 +2,7 @@ import { Box, TextField, Typography } from "@mui/material";
 import React from "react";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
-const PersonalInfo = () => {
+const PersonalInfo = React.memo (() => {
   return (
     <Box
       bgcolor="rgb(158, 179, 226)"
@@ -21,13 +21,14 @@ const PersonalInfo = () => {
           Personal Info
         </Typography>
       </Box>
-      <Box sx={{ display: "flex", paddingLeft: "40px" ,paddingTop:""}}>
+      <Box sx={{ display: "flex", paddingLeft: "40px" }}>
         <Box sx={{ width: "200px" }}>
           <TextField
             id="last-name"
             name="lastname"
             placeholder="Last Name"
             size="small"
+            
             sx={{ backgroundColor: "white", margin: "15px" }}
           />
         </Box>
@@ -94,6 +95,6 @@ const PersonalInfo = () => {
       </Box>
     </Box>
   );
-};
+});
 
 export default PersonalInfo;

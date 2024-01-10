@@ -10,17 +10,19 @@ import SearchIcon from "@mui/icons-material/Search";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import PersonIcon from "@mui/icons-material/Person";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
+import React from "react";
 
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
 const StyledToolBar = styled(Toolbar)({
   display: "flex",
   justifyContent: "flex-start",
-  margin: "0px",
+
   backgroundColor: "white",
-  gap: "30px",
-  paddingLeft: "0px",
-  paddingRight: "2px",
+  gap: "17px",
+  
+  
 });
 
 const Search = styled("div")(({ theme }) => ({
@@ -29,14 +31,13 @@ const Search = styled("div")(({ theme }) => ({
   backgroundColor: "#f3f3f3",
   borderRadius: "15px",
   border: "1px solid",
-  borderColor: "",
-  gap: "30px",
+  
+  gap: "25px",
 
   width: "35%",
 }));
 
-function NavBar() {
-
+const NavBar = React.memo(() => {
   return (
     <AppBar>
       <StyledToolBar>
@@ -90,6 +91,20 @@ function NavBar() {
             <InputBase placeholder="MRN Search.." sx={{ paddingLeft: "1px" }} />
           </Search>
         </Box>
+        <div>
+          <li>
+            <Link
+              to="/old"
+              style={{
+                textDecoration: "none",
+                color: "black",
+                fontSize: "20px",
+              }}
+            >
+              OLD
+            </Link>
+          </li>
+        </div>
         <Box
           sx={{
             display: "flex",
@@ -110,7 +125,7 @@ function NavBar() {
           <Badge
             badgeContent={17}
             color="error"
-            sx={{ display: "flex", gap: "15px" }}
+            sx={{ display: "flex", gap: "10px" }}
           >
             <NotificationsIcon
               sx={{ color: "black", fontSize: "2.0rem", paddingLeft: "25px" }}
@@ -120,6 +135,6 @@ function NavBar() {
       </StyledToolBar>
     </AppBar>
   );
-}
+});
 
 export default NavBar;
