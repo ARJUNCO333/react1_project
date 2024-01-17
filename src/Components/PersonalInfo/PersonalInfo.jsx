@@ -1,8 +1,10 @@
 import { Box, TextField, Typography } from "@mui/material";
 import React from "react";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { useTheme } from "@emotion/react";
 
-const PersonalInfo = React.memo (() => {
+const PersonalInfo = React.memo(() => {
+  const theme = useTheme();
   return (
     <Box
       bgcolor="rgb(158, 179, 226)"
@@ -11,7 +13,16 @@ const PersonalInfo = React.memo (() => {
         width: "33%",
         Width: "430px",
         height: "330px",
-        paddingBottom:"0px",
+        paddingBottom: "0px",
+        [theme.breakpoints.only("xs")]: {
+          width: "90%",
+        },
+        [theme.breakpoints.only("sm")]: {
+          width: "80%",
+        },
+        [theme.breakpoints.only("md")]: {
+          width: "60%",
+        },
         
       }}
     >
@@ -28,7 +39,6 @@ const PersonalInfo = React.memo (() => {
             name="lastname"
             placeholder="Last Name"
             size="small"
-            
             sx={{ backgroundColor: "white", margin: "15px" }}
           />
         </Box>
@@ -42,7 +52,7 @@ const PersonalInfo = React.memo (() => {
           />
         </Box>
       </Box>
-      <Box sx={{ display: "flex",paddingLeft: "40px" }}>
+      <Box sx={{ display: "flex", paddingLeft: "40px" }}>
         <Box sx={{ width: "200px" }}>
           <TextField
             id="age"
@@ -62,7 +72,7 @@ const PersonalInfo = React.memo (() => {
           />
         </Box>
       </Box>
-      <Box sx={{ display: "flex",paddingLeft: "40px" }}>
+      <Box sx={{ display: "flex", paddingLeft: "40px" }}>
         <Box sx={{ width: "200px" }}>
           <TextField
             id="name"
@@ -72,8 +82,8 @@ const PersonalInfo = React.memo (() => {
             sx={{ backgroundColor: "white", margin: "15px" }}
           />
         </Box>
-        </Box>
-      <Box sx={{ display: "flex",paddingLeft: "40px" }}>
+      </Box>
+      <Box sx={{ display: "flex", paddingLeft: "40px" }}>
         <Box sx={{ width: "200px" }}>
           <TextField
             id="street-name"

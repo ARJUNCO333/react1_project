@@ -8,9 +8,10 @@ import {
 } from "@mui/material";
 import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
 import React from "react";
-
+import { useTheme } from "@emotion/react";
 
 const Preferences = () => {
+  const theme = useTheme();
   const defaultValue = 0;
   return (
     <Box
@@ -20,6 +21,18 @@ const Preferences = () => {
         width: "33%",
         Width: "430px",
         height: "300px",
+        [theme.breakpoints.only("xs")]: {
+          width: "90%",
+          height: "330px",
+        },
+        [theme.breakpoints.only("sm")]: {
+          width: "80%",
+          height: "330px",
+        },
+        [theme.breakpoints.only("md")]: {
+          width: "60%",
+          height: "330px",
+        },
       }}
     >
       <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -33,13 +46,32 @@ const Preferences = () => {
       <Box sx={{ display: "flex", alignItems: "center", paddingTop: "15px" }}>
         <Typography
           variant="p"
-          sx={{ margin: "3px", marginLeft: "15px", fontWeight: "bold" }}
+          sx={{
+            margin: "3px",
+            marginLeft: "15px",
+            fontWeight: "bold",
+            [theme.breakpoints.only("xs")]: {
+              marginLeft: "7px",
+              fontSize: "15px",
+            },
+            [theme.breakpoints.only("sm")]: {
+              marginLeft: "15px",
+              fontSize: "15px",
+            },
+          }}
         >
           Insurance :
         </Typography>
         <FormControl
           size="small"
-          sx={{ width: "300px", backgroundColor: "white", marginLeft: "28px" }}
+          sx={{
+            width: "300px",
+            backgroundColor: "white",
+            marginLeft: "28px",
+            [theme.breakpoints.only("xs")]: {
+              width: "150px",
+            },
+          }}
         >
           <InputLabel id="demo-simple-select-label"></InputLabel>
           <Select
@@ -61,13 +93,32 @@ const Preferences = () => {
       <Box sx={{ display: "flex", alignItems: "center", paddingTop: "15px" }}>
         <Typography
           variant="p"
-          sx={{ margin: "3px", marginLeft: "15px", fontWeight: "bold" }}
+          sx={{
+            margin: "3px",
+            marginLeft: "15px",
+            fontWeight: "bold",
+            [theme.breakpoints.only("xs")]: {
+              marginLeft: "7px",
+              fontSize: "15px",
+            },
+            [theme.breakpoints.only("sm")]: {
+              marginLeft: "15px",
+              fontSize: "15px",
+            },
+          }}
         >
           Language :
         </Typography>
         <FormControl
           size="small"
-          sx={{ width: "300px", backgroundColor: "white", marginLeft: "26px" }}
+          sx={{
+            width: "300px",
+            backgroundColor: "white",
+            marginLeft: "26px",
+            [theme.breakpoints.only("xs")]: {
+              width: "150px",
+            },
+          }}
         >
           <InputLabel id="demo-simple-select-label"></InputLabel>
           <Select
@@ -88,13 +139,32 @@ const Preferences = () => {
       <Box sx={{ display: "flex", alignItems: "center", paddingTop: "15px" }}>
         <Typography
           variant="p"
-          sx={{ margin: "3px", marginLeft: "15px", fontWeight: "bold" }}
+          sx={{
+            margin: "3px",
+            marginLeft: "15px",
+            fontWeight: "bold",
+            [theme.breakpoints.only("xs")]: {
+              marginLeft: "7px",
+              fontSize: "15px",
+            },
+            [theme.breakpoints.only("sm")]: {
+              marginLeft: "15px",
+              fontSize: "15px",
+            },
+          }}
         >
           Orientation :
         </Typography>
         <FormControl
           size="small"
-          sx={{ width: "300px", backgroundColor: "white", marginLeft: "15px" }}
+          sx={{
+            width: "300px",
+            backgroundColor: "white",
+            marginLeft: "15px",
+            [theme.breakpoints.only("xs")]: {
+              width: "150px",
+            },
+          }}
         >
           <InputLabel id="demo-simple-select-label"></InputLabel>
           <Select
@@ -116,13 +186,32 @@ const Preferences = () => {
       <Box sx={{ display: "flex", alignItems: "center", paddingTop: "15px" }}>
         <Typography
           variant="p"
-          sx={{ margin: "3px", marginLeft: "15px", fontWeight: "bold" }}
+          sx={{
+            margin: "3px",
+            marginLeft: "15px",
+            fontWeight: "bold",
+            [theme.breakpoints.only("xs")]: {
+              marginLeft: "7px",
+              fontSize: "15px",
+            },
+            [theme.breakpoints.only("sm")]: {
+              marginLeft: "15px",
+              fontSize: "15px",
+            },
+          }}
         >
           Special Needs :
         </Typography>
         <FormControl
           size="small"
-          sx={{ width: "300px", backgroundColor: "white", marginLeft: "0px" }}
+          sx={{
+            width: "300px",
+            backgroundColor: "white",
+            marginLeft: "0px",
+            [theme.breakpoints.only("xs")]: {
+              width: "150px",
+            },
+          }}
         >
           <InputLabel id="demo-simple-select-label"></InputLabel>
           <Select

@@ -1,20 +1,21 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavBar from "./Components/NavBar/NavBar";
+import PersonalInfo from "./Components/PersonalInfo/PersonalInfo";
+import Preferences from "./Components/Prefernces/Preferences";
+import MedicalHistory from "./Components/MedicalHistory/MedicalHistory";
 
-import Form from "./Components/Form/Form";
-import Demo from "./Pages/Demo.jsx";
-import FormOld from "./Components/OldComp/FormOld/FormOld.js";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 function App() {
+  const theme = createTheme();
   return (
     <div>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Form />} />
-          <Route path="/demo" element={<Demo />} />
-          <Route path="/old" element={<FormOld />} />
-        </Routes>
-      </Router>
+      <ThemeProvider theme={theme}>
+        <NavBar />
+        <PersonalInfo />
+        <Preferences />
+        <MedicalHistory />
+      </ThemeProvider>
     </div>
   );
 }

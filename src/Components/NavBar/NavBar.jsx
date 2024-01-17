@@ -11,9 +11,9 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import PersonIcon from "@mui/icons-material/Person";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
 import React from "react";
-
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
+import { useTheme } from "@emotion/react";
 
 const StyledToolBar = styled(Toolbar)({
   display: "flex",
@@ -21,8 +21,6 @@ const StyledToolBar = styled(Toolbar)({
 
   backgroundColor: "white",
   gap: "17px",
-  
-  
 });
 
 const Search = styled("div")(({ theme }) => ({
@@ -31,13 +29,14 @@ const Search = styled("div")(({ theme }) => ({
   backgroundColor: "#f3f3f3",
   borderRadius: "15px",
   border: "1px solid",
-  
+
   gap: "25px",
 
   width: "35%",
 }));
 
 const NavBar = React.memo(() => {
+  const theme = useTheme()
   return (
     <AppBar>
       <StyledToolBar>
@@ -66,6 +65,7 @@ const NavBar = React.memo(() => {
         <Typography
           variant="h3"
           sx={{
+            display: { xs: "none", md: "flex" },
             color: "black",
             fontSize: "22px",
             gap: "10px",
@@ -77,21 +77,49 @@ const NavBar = React.memo(() => {
         <Box sx={{ display: "flex", gap: "30px" }}>
           <Search>
             <SearchIcon
-              sx={{ color: "black", padding: "4px", paddingLeft: "15px" }}
+              sx={{
+                color: "black",
+                padding: "4px",
+                paddingLeft: "15px",
+                display: { xs: "block", sm: "block" },
+              }}
             />
             <InputBase
               placeholder="Name Search.."
-              sx={{ paddingLeft: "5px" }}
+              sx={{
+                paddingLeft: "1px",
+                display: { xs: "none", sm: "block", md: "block" },
+              }}
             />
           </Search>
           <Search>
             <SearchIcon
-              sx={{ color: "black", padding: "4px", paddingLeft: "15px" }}
+              sx={{
+                color: "black",
+                padding: "4px",
+                paddingLeft: "15px",
+                display: { xs: "block", sm: "block" },
+              }}
             />
-            <InputBase placeholder="MRN Search.." sx={{ paddingLeft: "1px" }} />
+            <InputBase
+              placeholder="MRN Search.."
+              sx={{
+                paddingLeft: "1px",
+                display: { xs: "none", sm: "block", md: "block" },
+              }}
+            />
           </Search>
         </Box>
-        <div>
+        <Box
+          sx={{
+            display: {
+              xs: "none",
+              sm: "none",
+              md: "none",
+              lg:"block"
+            },
+          }}
+        >
           <li>
             <Link
               to="/old"
@@ -104,13 +132,18 @@ const NavBar = React.memo(() => {
               OLD
             </Link>
           </li>
-        </div>
+        </Box>
         <Box
           sx={{
             display: "flex",
             alignItems: "center",
-            gap: "10px   ",
+            gap: "10px ",
             paddingLeft: "35px",
+            [theme.breakpoints.down("sm")]:{
+              gap:"1px",
+              paddingLeft:"0px"
+            }
+            
           }}
         >
           <PersonIcon
@@ -118,17 +151,24 @@ const NavBar = React.memo(() => {
           />
           <Typography
             variant="h5"
-            sx={{ color: "black", fontSize: "20px", gap: "10px" }}
+            sx={{
+              color: "black",
+              fontSize: "20px",
+              gap: "10px",
+              display: { xs: "none", md: "flex" },
+            }}
           >
             Karan Yale
           </Typography>
           <Badge
             badgeContent={17}
             color="error"
-            sx={{ display: "flex", gap: "10px" }}
+            sx={{ display: "flex", gap: "10px",[theme.breakpoints.up("xs")]:{
+              gap:"1px"
+            } }}
           >
             <NotificationsIcon
-              sx={{ color: "black", fontSize: "2.0rem", paddingLeft: "25px" }}
+              sx={{ color: "black", fontSize: "2.0rem", paddingLeft: "25px", }}
             />
           </Badge>
         </Box>
