@@ -7,6 +7,7 @@ import FormOld from "./Components/OldComp/FormOld/FormOld.js";
 
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
 import App from "./App.js";
+import PatientDetails from "./Pages/PatientDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
     path: "old",
     element: < FormOld/>
   },
+  {
+    path:"patientdetails",
+    element:<PatientDetails/>
+  }
 ])
 
 

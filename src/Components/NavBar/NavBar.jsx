@@ -72,7 +72,7 @@ const NavBar = React.memo(() => {
             fontWeight: "bold",
           }}
         >
-          Patient Search
+          <Link to="/patientdetails" style={{textDecoration:"none", color:"black"}}>Patient Search</Link>
         </Typography>
         <Box sx={{ display: "flex", gap: "30px" }}>
           <Search>
